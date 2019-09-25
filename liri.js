@@ -45,9 +45,9 @@ function concertThis(input) {
         if (error) {
             var concInf = JSON.parse(body)
             for (var i = 0; i < concInf.length; i++) {
-                console.log("Venue name: " + concInf[i].venue.name);
-                console.log("Venue location: " + concInf[i].venue.city);
-                var formatDate = moment(concInf[i].datetime).format('MM/DD/YYYY');
+                console.log("Venue name: " + concInf[i].Venue.Name);
+                console.log("Venue location: " + concInf[i].Venue.City);
+                var formatDate = moment(concInf[i].dateTime).format('MM/DD/YYYY');
                 console.log("Date: " + formatDate);
 
                 // fs.appendFileSync("log.text", "\r\n\r\n" + concInf[i].venue.name + " , ");
@@ -68,7 +68,7 @@ function concertThis(input) {
 //display : artist,song name, album name, and a preview link
 
 function spotifyThis(input) {
-    //no song default to "Wonderboy" by Tenacious D
+    //---------------no song default to "Wonderboy" by Tenacious D----------------
     if (!input || input === undefined) {
         input = "Wonderboy"
     };
@@ -112,18 +112,19 @@ function movieThis() {
     if (!input || input === undefined) {
         input = "Mr. Nobody"
     }
-    //var queryURL2 = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
+    var queryURL2 = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
     axios.get(queryURL2).then(
             function (response) {
+                //console.log(response.data);
                 var movieData = response.data
-                console.log("movie title: " + movieData.title);
-                console.log("release year: " + movieData.releaseYear);
-                console.log("plot: " + movieData.plot);
-                console.log("actors: " + movieData.actors);
-                console.log("languages: " + movieData.language);
-                console.log("country produced: " + movieData.countryProduced);
+                console.log("movie title: " + movieData.Title);
+                console.log("release year: " + movieData.Year);
+                console.log("plot: " + movieData.Plot);
+                console.log("actors: " + movieData.Actors);
+                console.log("languages: " + movieData.Language);
+                console.log("country produced: " + movieData.Country);
                 console.log("IMDB rating: " + movieData.imdbRating);
-                console.log("rotton tomatoes rating: " + movieData.rottonTomatoesRating[1]);
+                console.log("rotton tomatoes rating: " + movieData.Ratings[1].Value);
 
                 // fs.appendFileSync("log.txt", "\r\n\r\n" + movieData.title + " , ");
                 // fs.appendFileSync("log.txt", "\r\n" + movieData.releaseYear + " , ");
