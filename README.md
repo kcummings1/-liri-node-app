@@ -5,10 +5,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 This app can take in one of the following commands:
 
-concert-this
-spotify-this-song
-movie-this
-do-what-it-says
+
 
 ---------------------------------------------------------------------
 
