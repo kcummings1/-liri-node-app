@@ -10,7 +10,7 @@ spotify-this-song
 movie-this
 do-what-it-says
 
-
+---------------------------------------------------------------------
 
 What Each Command Should Do:
 
