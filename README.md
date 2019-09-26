@@ -36,13 +36,13 @@ Actors in the movie.
 
 ----------------------------------------------------------------------
 node liri.js do-what-it-says
-
+----------------------------------------------------------------------
 Using the fs Node package, LIRI will take the text inside of random.txt 
 and then use it to call one of LIRI's commands.
 
 
 
-
+-----------------------------------------------------------------------
 
 
 [![Image from Gyazo](https://i.gyazo.com/f6c16633a88bba3e8fe499ea90a4533d.png)](https://gyazo.com/f6c16633a88bba3e8fe499ea90a4533d)
