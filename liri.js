@@ -42,17 +42,20 @@ function concertThis(input) {
     var queryURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp"
 
     request(queryURL, function (error, response, body) {
-        if (error) {
+        if (!error) {
             var concInf = JSON.parse(body)
+            //console.log(concInf);
             for (var i = 0; i < concInf.length; i++) {
-                console.log("Venue name: " + concInf[i].Venue.Name);
-                console.log("Venue location: " + concInf[i].Venue.City);
-                var formatDate = moment(concInf[i].dateTime).format('MM/DD/YYYY');
-                console.log("Date: " + formatDate);
 
-                // fs.appendFileSync("log.text", "\r\n\r\n" + concInf[i].venue.name + " , ");
-                // fs.appendFileSync("log.text", "\r\n" + concInf[i].venue.city + " , ");
-                // fs.appendFileSync("log.text", "\r\n" + formatDate + " , ");
+                console.log("Venue name: " + concInf[i].venue.name);
+                console.log("Venue location: " + concInf[i].venue.city);
+                var formatDate = moment(concInf[i].datetime).format('MM/DD/YYYY');
+                console.log("Date: " + formatDate);
+                console.log("-----------------")
+
+                 fs.appendFileSync("log.text", "\r\n\r\n" + concInf[i].venue.name + " , ");
+                 fs.appendFileSync("log.text", "\r\n" + concInf[i].venue.city + " , ");
+                 fs.appendFileSync("log.text", "\r\n" + formatDate + " , ");
 
             }
         } else {
@@ -89,11 +92,12 @@ function spotifyThis(input) {
                 console.log("song name: " + songData[j].name);
                 console.log("preview link: " + songData[j].preview_url);
                 console.log("song album: " + songData[j].album.name);
+                console.log("-----------------")
 
-                // fs.appendFileSync("log.txt", "\r\n\r\n" + songData[j].artists[0].name + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + songData[j].name + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + songData[j].preview_url + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + songData[j].album.name + " , ");
+                 fs.appendFileSync("log.txt", "\r\n\r\n" + songData[j].artists[0].name + " , ");
+                 fs.appendFileSync("log.txt", "\r\n" + songData[j].name + " , ");
+                 fs.appendFileSync("log.txt", "\r\n" + songData[j].preview_url + " , ");
+                 fs.appendFileSync("log.txt", "\r\n" + songData[j].album.name + " , ");
             };
         }
     );
@@ -112,6 +116,7 @@ function movieThis() {
     if (!input || input === undefined) {
         input = "Mr. Nobody"
     }
+    
     var queryURL2 = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
     axios.get(queryURL2).then(
             function (response) {
@@ -125,15 +130,16 @@ function movieThis() {
                 console.log("country produced: " + movieData.Country);
                 console.log("IMDB rating: " + movieData.imdbRating);
                 console.log("rotton tomatoes rating: " + movieData.Ratings[1].Value);
+                console.log("-----------------")
 
-                // fs.appendFileSync("log.txt", "\r\n\r\n" + movieData.title + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.releaseYear + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.plot + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.actors + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.language + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.countryProduced + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.imdbRating + " , ");
-                // fs.appendFileSync("log.txt", "\r\n" + movieData.rottonTomatoesRating[1] + " , ");
+                  fs.appendFileSync("log.txt", "\r\n\r\n" + movieData.title + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.releaseYear + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.plot + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.actors + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.language + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.countryProduced + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.imdbRating + " , ");
+                  fs.appendFileSync("log.txt", "\r\n" + movieData.Ratings[1] + " , ");
 
 
             })
@@ -152,15 +158,16 @@ function movieThis() {
             }
             console.log(error.config);
         })
-}
+};
+
 //-----------DO IT----------
 function doIt() {
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
             console.log("error: " + error)
             return;
-        }
+        };
         var infoArr = data.split(",");
-        beginLiri(infoArr[0], infoArr[1])
-    })
-}
+        beginLiri(infoArr[0], infoArr[1]);
+    });
+};
