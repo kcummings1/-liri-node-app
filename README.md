@@ -11,7 +11,7 @@ node liri.js concert-this <artist/band name here>
 
 * Name of the venue
 * Venue location
-*Date of the Event (use moment to format this as "MM/DD/YYYY")
+* Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 ---------------------------------------------------------------------
 node liri.js spotify-this-song '<song name here>'
