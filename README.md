@@ -59,6 +59,6 @@ and then use it to call one of LIRI's commands.
 
 -------------------------------------------------------------------------------
 
-Many thanks for taking the time and consideration out of your day to look at my github. 
+
 
 * https://www.linkedin.com/in/kobi-cummings/
