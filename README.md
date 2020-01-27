@@ -29,7 +29,7 @@ node liri.js movie-this '<movie name here>'
 * IMDB Rating of the movie
 * Rotten Tomatoes Rating of the movie
 * Country where the movie was produced
-Language of the movie.
+* Language of the movie
 Plot of the movie.
 Actors in the movie.
 
