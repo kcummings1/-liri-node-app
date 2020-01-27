@@ -27,7 +27,7 @@ node liri.js movie-this '<movie name here>'
 * Title of the movie
 * Year the movie came out
 * IMDB Rating of the movie
-Rotten Tomatoes Rating of the movie.
+* Rotten Tomatoes Rating of the movie
 Country where the movie was produced.
 Language of the movie.
 Plot of the movie.
