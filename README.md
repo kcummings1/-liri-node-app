@@ -17,7 +17,7 @@ node liri.js concert-this <artist/band name here>
 node liri.js spotify-this-song '<song name here>'
 
 * Artist(s)
-*The song's name
+* The song's name
 A preview link of the song from Spotify
 The album that the song is from
 
