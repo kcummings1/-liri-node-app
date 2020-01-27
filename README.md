@@ -31,7 +31,7 @@ node liri.js movie-this '<movie name here>'
 * Country where the movie was produced
 * Language of the movie
 * Plot of the movie
-Actors in the movie.
+*Actors in the movie.
 
 ----------------------------------------------------------------------
 
