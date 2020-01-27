@@ -7,7 +7,6 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 What Each Command Should Do:
 
-
 node liri.js concert-this <artist/band name here>
 
 Name of the venue
