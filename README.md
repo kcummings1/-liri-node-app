@@ -10,7 +10,7 @@ What Each Command Should Do:
 node liri.js concert-this <artist/band name here>
 
 * Name of the venue
-Venue location
+* Venue location
 Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 ---------------------------------------------------------------------
