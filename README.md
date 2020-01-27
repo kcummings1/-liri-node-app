@@ -24,7 +24,7 @@ node liri.js spotify-this-song '<song name here>'
 ---------------------------------------------------------------------
 node liri.js movie-this '<movie name here>'
 
-Title of the movie.
+*Title of the movie.
 Year the movie came out.
 IMDB Rating of the movie.
 Rotten Tomatoes Rating of the movie.
